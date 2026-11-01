@@ -1,0 +1,24 @@
+{
+  "name": "sync2s3",
+  "version": "0.1.0",
+  "description": "Simple Obsidian S3 sync plugin",
+  "type": "module",
+  "scripts": {
+    "build": "bun run typecheck && bun run ./scripts/build.ts",
+    "typecheck": "tsc --noEmit",
+    "test": "bun test",
+    "sigcheck": "bun run ./scripts/sig-check.ts",
+    "deploy": "bun run ./scripts/deploy.ts"
+  },
+  "dependencies": {
+    "obsidian": "latest"
+  },
+  "devDependencies": {
+    "@aws-crypto/sha256-js": "^5.2.0",
+    "@aws-sdk/signature-v4": "^3.374.0",
+    "@smithy/protocol-http": "^5.6.2",
+    "@smithy/signature-v4": "^5.7.5",
+    "bun-types": "^1.4.4",
+    "typescript": "^5.6.0"
+  }
+}

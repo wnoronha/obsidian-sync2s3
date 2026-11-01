@@ -1,0 +1,9 @@
+{
+  "id": "sync2s3",
+  "name": "Sync2S3",
+  "version": "0.1.0",
+  "minAppVersion": "1.11.4",
+  "description": "Simple S3-backed sync for Obsidian",
+  "author": "wnoronha",
+  "isDesktopOnly": false
+}

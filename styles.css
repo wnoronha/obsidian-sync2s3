@@ -1,0 +1,98 @@
+.sync2s3-status {
+  white-space: nowrap;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.sync2s3-ico {
+  display: inline-flex;
+}
+
+.sync2s3-ico svg {
+  width: 16px;
+  height: 16px;
+}
+
+.sync2s3-spin {
+  animation: sync2s3-rotate 1s linear infinite;
+  color: var(--text-accent);
+}
+
+.sync2s3-err {
+  color: var(--text-error);
+}
+
+@keyframes sync2s3-rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.sync2s3-card {
+  background-color: var(--background-secondary);
+  border: 1px solid var(--background-modifier-border);
+  border-radius: 12px;
+  margin: 0 0 20px 0;
+  overflow: hidden;
+}
+
+.sync2s3-card > .setting-item {
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  margin: 0;
+  padding: 12px 18px;
+}
+
+.sync2s3-card > .setting-item + .setting-item {
+  border-top: 1px solid var(--background-modifier-border);
+}
+
+.sync2s3-log {
+  user-select: text;
+  -webkit-user-select: text;
+  max-height: 240px;
+  overflow: auto;
+  background: var(--background-secondary);
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  cursor: text;
+}
+
+.sync2s3-log-row {
+  display: flex;
+  gap: 8px;
+  padding: 1px 0;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.sync2s3-log-time {
+  flex: none;
+  color: var(--text-faint);
+}
+
+.sync2s3-log-error .sync2s3-log-msg {
+  color: var(--text-error);
+}
+
+.sync2s3-log-conflict .sync2s3-log-msg {
+  color: var(--text-warning, orange);
+}
+
+.sync2s3-log-delete .sync2s3-log-msg,
+.sync2s3-log-prune .sync2s3-log-msg {
+  color: var(--text-warning, orange);
+}
+
+.sync2s3-log-ok .sync2s3-log-msg,
+.sync2s3-log-plan .sync2s3-log-msg {
+  color: var(--text-success, green);
+}
+
+.sync2s3-log-migration .sync2s3-log-msg {
+  color: var(--text-accent);
+}

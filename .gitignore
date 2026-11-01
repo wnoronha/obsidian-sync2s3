@@ -1,0 +1,6 @@
+.agents/skills/
+.opencode/agents/
+.env
+node_modules/
+main.js
+main.js.map
